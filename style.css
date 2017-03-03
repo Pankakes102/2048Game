@@ -11,8 +11,12 @@ body{
 	padding-top:10px;
 	/*was gunna have a defalut color if the pic
 	didnt load but that wasnt workin so...*/
-	background-image:url("../2048/drawable/backg7.JPG");
+	/*
+	background-image:url("drawable/backg7.JPG");
 	background-repeat:no-repeat;
+	background-size:cover;
+	*/
+	background: #1a1e22 url("drawable/backg7.jpg") no-repeat;
 	background-size:cover;
 }
 #defaultCanvas0{
@@ -46,7 +50,7 @@ input[type="submit"]{
 	float:left;
 	text-align:center;
 	color:white;
-	height:420px;
+	height:400px;
 	background-color:none;
 	margin-top:40px;
 	margin-left:5%;
@@ -57,7 +61,7 @@ input[type="submit"]{
 	float:right;
 	text-align:center;
 	color:white;
-	height:420px;
+	height:400px;
 	background-color:none;
 	margin-top:40px;
 	margin-right:5%;
