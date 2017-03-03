@@ -1,0 +1,185 @@
+/*This file was created my Michael Szczepanski */
+/*regular style stuff......*/
+*{
+	margin:0;
+}
+html{ 
+	overflow-y: hidden; 
+}
+
+body{
+	padding-top:10px;
+	/*was gunna have a defalut color if the pic
+	didnt load but that wasnt workin so...*/
+	background-image:url("../2048/drawable/backg7.JPG");
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+#defaultCanvas0{
+	margin:0 auto;
+	display:block;
+	border:1px solid white;
+}
+.topInfo{
+	width:370px;
+	display:block;
+	margin:0 auto;
+	padding:10px 0 10px 0;
+	color:white;
+	background-color:black;
+	border-style:solid;
+	border-width:1px 1px 0px 1px;
+	border-color:white;
+}
+#scoreLabel{
+	padding-left:10px;
+}
+#hscoreLabel{
+	margin-left:80px;
+}
+input[type="submit"]{
+	float:right;
+	margin-right:10px;
+}
+.LboardLeft{
+	width:300px;
+	float:left;
+	text-align:center;
+	color:white;
+	height:420px;
+	background-color:none;
+	margin-top:40px;
+	margin-left:5%;
+	border:1px solid white;
+}
+.LboardRight{
+	width:300px;
+	float:right;
+	text-align:center;
+	color:white;
+	height:420px;
+	background-color:none;
+	margin-top:40px;
+	margin-right:5%;
+	border:1px solid white;
+}
+
+.LboardTitle{
+	padding:10px 0px 10px 0px; 
+	border-bottom:1px solid white;
+	background-color:black;
+}
+
+ol{
+	padding-left:30px;
+	margin:0;
+	text-align:left;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height:100vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .7s ease;
+  background-color: #000;
+}
+
+.overlay2 {
+  position: absolute;
+  display:none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: .7s ease;
+  background-color: #000;
+}
+
+.container:hover .overlay {
+  opacity: 0.8;
+}
+
+.container:hover .overlay2 {
+	opacity: 0.8;
+}
+
+.text {
+  color: white;
+  text-align:center;
+  font-size: 30px;
+  position: absolute;
+  width:70%;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.closebtn {
+    margin-left: 15px;
+    margin-right: 150px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 100px;
+    line-height: 100px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closeName{
+	margin-left: 15px;
+    margin-right: 150px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 100px;
+    line-height: 100px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: grey;
+}
+
+.customU{
+	border-bottom:1px solid white;
+}
+
+.subVal{
+	width:35%;
+	margin:0 auto;
+}
+
+input[type="text"]{
+	border:1px inset;
+	font-size:20px;
+	margin:1px 0 1px 0;
+}
+
+#submitButton{
+	margin-top:6px;
+	margin-left:4px;
+	margin-bottom:1px;
+	padding:1px 5px 1px 5px;
+	font-size:20px;
+}
+
+.discl{
+	font-size:10px;
+}

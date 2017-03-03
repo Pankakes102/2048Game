@@ -1,0 +1,76 @@
+<!-- This file was created by Michael Szczepanski -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>2048</title>
+		<!-- css-->
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <!-- p5.js files-->
+		<script src="lib/p5//p5.js" type="text/javaScript" language="javascript"></script>
+		<script src="lib/p5/p5.dom.js" type="text/javaScript" language="javascript"></script> 
+		<!-- firebase connection-->
+		<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+		<!-- javascript files used to do the game stuff-->
+		<script src="lib/Logic.js" type="text/javaScript" language="javascript"></script> 
+		<script src="lib/Board.js" type="text/javaScript" language="javascript"></script> 
+		<script src="lib/Cube.js" type="text/javaScript" language="javascript"></script> 
+		<script src="lib/main.js" type="text/javaScript" language="javascript"></script>
+	</head>
+	<body class="container">
+		<!-- overlay is a welcome page, it appears when the user first comes to the site
+			it is deactivated when they press the X in top right corner -->
+		<div class="overlay">
+			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+    		<div class="text">
+    			<h2>Welcome to 2048</h2>
+    			<span class="customU">Created by: Michael Szczepanski</span><br><br>
+    			Combine as many tiles as you can to get the Highest Score<br>
+    			Submit your name to be on the Leader Boards<br>
+    			Any Problems? Let me know:<br>
+    			mszczepa@umflint.edu<br><br>
+    			Enjoy!<br><br>
+    			<span class="discl">
+    				*Disclamer: this was inteded to be used in a desktop view on google chrome, using it elsewhere may affect the visiual output of the program*
+    			</span>
+    		</div>
+ 		</div>
+ 		<!-- Displays current leader boards, new firebase entries go on top, limit 20-->
+		<div class="LboardLeft">
+			<div class="LboardTitle">Current Leaderboards</div>
+			<ol id="LocalLeaderBoard">
+			</ol>
+		</div>
+		<!-- Displays global leader boards, highest scores ever go on top, limit 20-->
+		<div class="LboardRight">
+			<div class="LboardTitle">Global Leaderboards</div>
+			<ol id="GlobalLeaderBoard">
+			</ol>
+		</div>
+		<!-- Place for the score and reset button if someone wants to reset the game...-->
+		<div class="topInfo">
+		<span id="scoreLabel">Score:</span>
+		<span id="score">0</span>
+		<input id="reset" type="submit" value="Reset" onclick="restartGame()">
+		</div>
+		<!-- This is where the p5.js createCanvas is going to go, using canvas.parent() in js-->
+		<div id="canvasContainer"></div>
+		<!-- overlay2 appears when the player has "lost" the game and is out of moves
+			 it will ask them to enter a name, if they do and click okay it will go to firebase
+			 and appear on the leaderboards, if press X or enter with no name value, no firebase.
+			 it will reset the game but no the page.-->
+		<div class="overlay2">
+		<span class="closeName" onclick="closeNameBtn()">&times;</span> 
+    		<div class="text">
+    			<p>If you would like to be on the leaderboards,<br>
+    			   Enter you name!<br></p>
+			   	<div class="subVal">
+    			   	<form name="input" id="input">
+		    			<input type="text" id="username" autofocus>
+		    			<input type="submit" value="Ok" id="submitButton" onclick="return onSubmit();">
+	    			</form>
+    			</div>
+    		</div>
+ 		</div>
+	</body>
+</html>
+
