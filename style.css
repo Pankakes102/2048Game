@@ -50,7 +50,7 @@ input[type="submit"]{
 	float:left;
 	text-align:center;
 	color:white;
-	height:400px;
+	height:auto;
 	background-color:none;
 	margin-top:40px;
 	margin-left:5%;
@@ -61,7 +61,7 @@ input[type="submit"]{
 	float:right;
 	text-align:center;
 	color:white;
-	height:400px;
+	height:auto;
 	background-color:none;
 	margin-top:40px;
 	margin-right:5%;
