@@ -187,3 +187,9 @@ input[type="text"]{
 .discl{
 	font-size:10px;
 }
+
+@media screen and (max-width: 1090px){
+	.LboardLeft,.LboardRight{
+		display:none;
+	}
+}
